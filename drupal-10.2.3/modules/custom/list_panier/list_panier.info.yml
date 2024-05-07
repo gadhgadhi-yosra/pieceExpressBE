@@ -1,0 +1,5 @@
+name: List Panier
+type: module
+description: 'Provides a custom shopping cart with POST methods.'
+package: Custom
+core_version_requirement: ^10

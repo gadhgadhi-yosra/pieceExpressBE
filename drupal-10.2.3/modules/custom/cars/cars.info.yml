@@ -1,0 +1,8 @@
+name : Cars 
+description: Allow users to search for informations on cars
+package: CustomModules 
+
+
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+php_version: ^8 || ^9

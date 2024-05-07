@@ -1,0 +1,11 @@
+phone_number: ''
+allow_automatic_registration: false
+new_user_role: ''
+prevent_admin_role_login: true
+prevent_uid1_login: true
+
+replace_default_login: false
+disable_default_register: false
+disable_default_password_reset: false
+
+enabled_processor_plugins: { }

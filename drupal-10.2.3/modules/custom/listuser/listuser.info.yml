@@ -1,0 +1,5 @@
+name: 'ListUser'
+type: module
+description: 'Affiche une liste des utilisateurs avec leur dernière date de connexion.'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10

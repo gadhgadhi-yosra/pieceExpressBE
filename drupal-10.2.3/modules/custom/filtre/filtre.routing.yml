@@ -1,0 +1,8 @@
+filtre.lister_filtres:
+  path: '/api/filtres'
+  defaults:
+    _controller: '\Drupal\filtre\Controller\FiltreController::listerFiltresPR'
+    _title: 'Liste des filtres'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'

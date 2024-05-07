@@ -1,0 +1,6 @@
+name: Filtre Catalogue
+type: module
+description: Provides a listing of filters.
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10
+php_version: ^8 || ^9

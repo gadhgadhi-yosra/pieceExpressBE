@@ -1,0 +1,5 @@
+name: 'UserProfileTools'
+type: module
+description: 'Fournit des fonctionnalités de mise à jour de profil et de changement de mot de passe.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom

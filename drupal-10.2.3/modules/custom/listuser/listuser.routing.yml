@@ -1,0 +1,7 @@
+listuser.liste:
+  path: '/utilisateurs'
+  defaults:
+    _controller: '\Drupal\listuser\Controller\ListUserController::liste'
+    _title: 'Liste des utilisateurs'
+  requirements:
+    _permission: 'access content'

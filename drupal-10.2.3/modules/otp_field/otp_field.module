@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Procedural codes for otp_cron
+ *
+ * @author "Ahmad Hejazee" <mngafa@gmail.com>
+ * @since Oct 2 2023
+ */
+
+/**
+ * Implements hook_cron().
+ *
+ * Delete expired OTP secrets.
+ */
+function otp_field_cron() {
+  /** @var \Drupal\Core\Logger\LoggerChannelInterface $logger */
+  $logger = \Drupal::service('logger.factory')->get('otp_field');
+  $logger->info('Started cron: Delete expired OTP secrets.');
+
+  $count = \Drupal::database()->delete('otp_field_secrets')
+    ->condition('expire', time(), '<=')
+    ->execute();
+
+  $logger->info('Finished deleting expired OTP secrets. Deleted @number items.', [
+    '@number' => $count,
+  ]);
+}
+
+/**
+ * Implements hook_mail().
+ */
+function otp_field_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'send_otp_secret':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Verify your email address');
+      $message['body'][] = $params['message'];
+      break;
+  }
+}

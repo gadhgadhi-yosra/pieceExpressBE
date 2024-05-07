@@ -1,0 +1,3 @@
+otp_secret_lifetime: 600
+otp_secret_min_lifetime: 120
+countdown_seconds: 60

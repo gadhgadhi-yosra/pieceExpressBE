@@ -1,0 +1,13 @@
+name: Chatbot API Entities test
+description: Provides test implementations for chatbot API entities
+type: module
+hidden: TRUE
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+depdencies:
+  - chatbot_api_entities
+
+# Information added by Drupal.org packaging script on 2022-07-25
+version: '8.x-2.0'
+project: 'chatbot_api'
+datestamp: 1658758042

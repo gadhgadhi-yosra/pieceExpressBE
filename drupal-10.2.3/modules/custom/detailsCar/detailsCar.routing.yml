@@ -1,0 +1,8 @@
+detailsCar.post_data:
+  path: '/car-details/post'
+  defaults:
+    _controller: '\Drupal\detailsCar\Controller\CarDetailsController::getCarDetails'
+    _title: 'Post Car Details'
+  methods: ['POST']
+  requirements:
+    _permission: 'access content'

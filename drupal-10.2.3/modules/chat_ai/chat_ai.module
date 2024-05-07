@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Chat AI module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function chat_ai_help($route_name, RouteMatchInterface $route_match) {
+
+  switch ($route_name) {
+    case 'help.page.chat_ai':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Chat AI module provides a chat bot that can answer questions based on your website content. Allows visitors to interact with your website in natural language.</p>');
+      $output .= '<p>' . t('Is its based on <a href="https://platform.openai.com">Open AI API</a> and <a href="https://supabase.com">Supabase</a> as vector store provider.</p>');
+      $output .= '<p>' . t('Before using this module you have to setup a new Supabase project. </p>');
+      $output .= '<p>' . t('Please check the full installation instructions on the <a href="">module\'s repository page</a>.');
+      $output .= '</dl>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function chat_ai_theme() {
+  return [
+    'block__chat_ai' => [
+      'render element' => 'elements',
+      'template' => 'block--chat-ai',
+      'base hook' => 'block',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function chat_ai_entity_insert(EntityInterface $entity) {
+  $embeddings = \Drupal::service('chat_ai.embeddings');
+  $shouldIndex = $embeddings->shouldIndex($entity);
+  if ($shouldIndex) {
+    $embeddings->upsertDbEmbedding($entity);
+    $embeddings->insertToQueue($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function chat_ai_entity_update(EntityInterface $entity) {
+  $embeddings = \Drupal::service('chat_ai.embeddings');
+  $shouldIndex = $embeddings->shouldIndex($entity);
+  if ($shouldIndex) {
+    $embeddings->insertToQueue($entity);
+  }
+}

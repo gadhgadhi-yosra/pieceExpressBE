@@ -1,0 +1,9 @@
+custom_car_brands_api.brands_post:
+  path: '/api/car-brands'
+  methods: [ 'POST' ]
+  defaults:
+    _controller: '\Drupal\custom_car_brands_api\Controller\CarBrandsController::handlePost'
+    _title: 'Car Brands List'
+  requirements:
+    _permission: 'access content'
+   

@@ -1,0 +1,8 @@
+name: 'Car Details'
+type: module
+description: 'Provides a car details page with POST method for updates.'
+package: Custom
+core_version_requirement: '^8 || ^9 || ^10'
+
+
+

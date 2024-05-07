@@ -1,0 +1,14 @@
+role.list_users:
+  path: '/admin/people/role-list/{role}'
+  defaults:
+    _controller: '\Drupal\role\Controller\RoleController::users'
+    _title: 'User Role List'
+  requirements:
+    _permission: 'access content'
+
+role.filter_form:
+  path: '/admin/people/role-list/filter-form'
+  defaults:
+    _form: '\Drupal\role\Form\RoleFilterForm'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,8 @@
+voiture_filtre.lister_voitures_par_marque:
+  path: '/api/voitures/{marque}'
+  defaults:
+    _controller: '\Drupal\voiture_filtre\Controller\VoitureFiltreController::listerVoituresParMarque'
+    _title: 'Liste des voitures par marque'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,8 @@
+list_cars_by_marque.api:
+  path: '/api/list-cars-by-marque'
+  methods: [ 'POST' ]
+  defaults:
+    _controller: '\Drupal\list_cars_by_marque\Controller\CarsByMarqueController::listCars'
+    _title: 'List Cars by Marque'
+  requirements:
+    _permission: 'access content'

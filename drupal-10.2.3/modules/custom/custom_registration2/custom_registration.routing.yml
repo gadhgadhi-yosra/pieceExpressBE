@@ -1,0 +1,7 @@
+custom_registration.registration_form:
+  path: '/custom-registration'
+  defaults:
+    _form: '\Drupal\custom_registration\Form\CustomRegistrationForm'
+    _title: 'Custom Registration'
+  requirements:
+    _permission: 'access content'

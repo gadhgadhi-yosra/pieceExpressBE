@@ -1,0 +1,15 @@
+name: 'Commerce Checkout Pane: OTP Login'
+description: Provides a Commerce Checkout Pane for OTP login.
+type: module
+core_version_requirement: ^9 || ^10
+php: 8.1
+package: OTP Field
+
+dependencies:
+  - commerce:commerce_checkout (>=2.36)
+  - otp_field:otp_field_user_auth
+
+# Information added by Drupal.org packaging script on 2023-10-08
+version: '1.0.0-beta3'
+project: 'otp_field'
+datestamp: 1696738508

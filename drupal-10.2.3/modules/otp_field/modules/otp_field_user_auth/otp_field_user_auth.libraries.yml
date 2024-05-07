@@ -1,0 +1,10 @@
+otp_login_behavior:
+  version: 1.0
+  js:
+    lib/otp_login_behavior/otp_login_behavior.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+    - otp_field/otp_field_behavior

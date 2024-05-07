@@ -1,0 +1,14 @@
+otp_service.validation_form:
+  path: '/otp/validation'
+  defaults:
+    _form: '\Drupal\otp_service\Form\OTPValidationForm'
+    _title: 'OTP Validation'
+  requirements:
+    _permission: 'use otp_service form'
+otp_service.settings:
+  path: '/admin/otp/settings'
+  defaults:
+    _form: '\Drupal\otp_service\Form\Settings'
+    _title: 'OTP Service Settings'
+  requirements:
+    _permission: 'administer otp_service'

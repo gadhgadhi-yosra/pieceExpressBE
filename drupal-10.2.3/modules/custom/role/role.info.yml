@@ -1,0 +1,8 @@
+name: 'Role'
+type: module
+description: 'Custom module to list users with their last access date and filter by role.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:user
+

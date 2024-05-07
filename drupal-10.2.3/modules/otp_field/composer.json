@@ -1,0 +1,19 @@
+{
+    "name": "drupal/otp_field",
+    "description": "Provides course content type and related functionality",
+    "type": "drupal-custom-module",
+    "authors": [
+        {
+            "name": "Ahmad Hejazee",
+            "email": "mngafa@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": { }
+}
+

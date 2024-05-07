@@ -1,0 +1,5 @@
+configure otp_field_user_auth:
+  title: Configure OTP Field User Auth settings
+
+login by otp_field:
+  title: Login by otp_field

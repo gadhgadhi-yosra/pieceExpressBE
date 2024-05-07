@@ -1,0 +1,19 @@
+# Configuration form.
+otp_field.settings:
+  path: /admin/config/people/otp_field
+  defaults:
+    _form: Drupal\otp_field\Form\SettingsForm
+    _title: OTP Field Settings
+  requirements:
+    _permission: configure otp_field
+
+# Ajax endpoint for checking or generating a secret.
+otp_field.check_secret:
+  path: /opt_field/check_secret
+  defaults:
+    _controller: 'Drupal\otp_field\Controller\CheckSecretController:checkSecret'
+  methods: ['POST']
+  requirements:
+    _permission: access content
+  options:
+    no_cache: true

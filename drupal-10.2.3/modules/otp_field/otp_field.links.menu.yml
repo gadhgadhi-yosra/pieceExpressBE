@@ -1,0 +1,5 @@
+otp_field.settings:
+  route_name: otp_field.settings
+  title: OTP Field
+  description: Configure OTP Field settings
+  parent: user.admin_index

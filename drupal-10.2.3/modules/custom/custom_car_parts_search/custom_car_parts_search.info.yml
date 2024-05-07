@@ -1,0 +1,7 @@
+name: 'Custom Car Parts Search'
+type: module
+description: 'Provides a custom search functionality for car parts.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:rest

@@ -1,0 +1,12 @@
+name: Chatbot API Entities
+description: Provides API for pushing Drupal entities to chatbot services
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - chatbot_api:chatbot_api
+
+# Information added by Drupal.org packaging script on 2022-07-25
+version: '8.x-2.0'
+project: 'chatbot_api'
+datestamp: 1658758042

@@ -1,0 +1,11 @@
+{
+    "name": "drupal/otp_service",
+    "type": "drupal-module",
+    "description": "This module provides a form to setup a otp token and a service to validate access.",
+    "homepage": "https://www.drupal.org/project/otp_service",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "pragmarx/google2fa": "^8.0"
+    }
+}

@@ -1,0 +1,8 @@
+custom_search.search:
+  path: '/custom-search'
+  defaults:
+    _controller: '\Drupal\custom_search\Controller\SearchController::search'
+    _title: 'Custom Search'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'

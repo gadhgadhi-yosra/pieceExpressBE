@@ -1,0 +1,28 @@
+chat_ai.keys:
+  path: '/admin/config/system/chat-ai/keys'
+  defaults:
+    _title: 'API Keys'
+    _form: 'Drupal\chat_ai\Form\ApiKeysSettingsForm'
+  requirements:
+    _permission: 'administer chat_ai configuration'
+chat_ai.embeddings:
+  path: '/admin/config/system/chat-ai/embeddings'
+  defaults:
+    _title: 'Indexing'
+    _form: 'Drupal\chat_ai\Form\EmbeddingsForm'
+  requirements:
+    _permission: 'administer chat_ai configuration'
+chat_ai.settings:
+  path: '/admin/config/system/chat-ai/settings'
+  defaults:
+    _title: 'Settings'
+    _form: 'Drupal\chat_ai\Form\SettingsForm'
+  requirements:
+    _permission: 'administer chat_ai configuration'
+chat_ai.clear_index_confirm:
+  path: '/chat-ai/clear-index-confirm'
+  defaults:
+    _title: 'Clear all indexed data'
+    _form: 'Drupal\chat_ai\Form\ClearIndexConfirmForm'
+  requirements:
+    _permission: 'administer chat_ai configuration'

@@ -1,0 +1,5 @@
+otp_field_user_auth.settings:
+  route_name: otp_field_user_auth.settings
+  title: OTP User Auth
+  description: Configure OTP Field User Auth
+  parent: otp_field.settings

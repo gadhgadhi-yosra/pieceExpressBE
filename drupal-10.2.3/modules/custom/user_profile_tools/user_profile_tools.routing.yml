@@ -1,0 +1,26 @@
+user_profile_tools.update_profile:
+  path: '/api/update-profile'
+  defaults:
+    _controller: 'Drupal\userProfileTools\Controller\UpdateProfileController::updateProfile'
+    _title: 'Update User Profile'
+  methods: ['POST']
+  requirements:
+    _permission: 'edit own profile'
+
+user_profile_tools.reset_password:
+  path: '/api/password-reset'
+  defaults:
+    _controller: 'Drupal\userProfileTools\Controller\PasswordResetController::resetPassword'
+    _title: 'Change User Password'
+  methods: ['POST']
+  requirements:
+    _permission: 'change own password'
+
+user_profile_tools.register:
+  path: '/api/registration'
+  defaults:
+    _controller: 'Drupal\userProfileTools\Controller\RegistrationController::register'
+    _title: 'User Registration'
+  methods: ['POST']
+  requirements:
+    _permission: 'create new users'

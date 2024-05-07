@@ -1,0 +1,7 @@
+rechercheCar.search:
+  path: '/recherche-car/search'
+  defaults:
+    _controller: '\Drupal\rechercheCar\Controller\RechercheCarController::search'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'

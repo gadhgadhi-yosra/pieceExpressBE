@@ -1,0 +1,17 @@
+list_panier.add_to_cart:
+  path: '/cart/add'
+  defaults:
+    _controller: '\Drupal\list_panier\Controller\CartController::addToCart'
+    _title: 'Add to cart'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'
+
+list_panier.remove_from_cart:
+  path: '/cart/remove'
+  defaults:
+    _controller: '\Drupal\list_panier\Controller\CartController::removeFromCart'
+    _title: 'Remove from cart'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'

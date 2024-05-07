@@ -1,0 +1,14 @@
+name: 'OTP Field: User Auth'
+type: module
+description: Provides OTP authentication using the otp_field module.
+core_version_requirement: ^9 || ^10
+package: OTP Field
+configure: otp_field_user_auth.settings
+
+dependencies:
+  - otp_field:otp_field
+
+# Information added by Drupal.org packaging script on 2023-10-08
+version: '1.0.0-beta3'
+project: 'otp_field'
+datestamp: 1696738508

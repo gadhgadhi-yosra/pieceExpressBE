@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Installation hooks
+ *
+ * @author "Ahmad Hejazee" <mngafa@gmail.com>
+ * @since Oct 2 2023
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function otp_field_schema() {
+  $schema = [];
+
+  $schema['otp_field_secrets'] = [
+    'description' => 'Stores otp secrets for the otp_field module.',
+    'fields' => [
+      'otp_key' => [
+        'description' => 'A site-unique key for the otp field. It will be prepended to the identity.',
+        'type' => 'varchar_ascii',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'identity' => [
+        'description' => 'The OTP identity string. Typically it is a mobile number, or an email address.',
+        'type' => 'varchar',
+        'length' => 250,
+        'not null' => TRUE,
+      ],
+      'secret' => [
+        'description' => 'The generated OTP secret.',
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => TRUE,
+      ],
+      'created' => [
+        'description' => 'The unix timestamp of creation time',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'expire' => [
+        'description' => 'The unix timestamp of expiration time',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['otp_key', 'identity'],
+  ];
+
+  return $schema;
+}

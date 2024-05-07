@@ -1,0 +1,8 @@
+custom_car_parts_search.search_car_parts:
+  path: '/api/car-parts-search'
+  defaults:
+    _controller: '\Drupal\custom_car_parts_search\Controller\CustomCarPartsSearchController::searchCarParts'
+    _title: 'Car Parts Search API'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'

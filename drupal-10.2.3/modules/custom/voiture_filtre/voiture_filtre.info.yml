@@ -1,0 +1,6 @@
+name: 'Filtre de Voiture'
+description: 'Fournit une API pour filtrer les voitures par marque.'
+package: Custom
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+

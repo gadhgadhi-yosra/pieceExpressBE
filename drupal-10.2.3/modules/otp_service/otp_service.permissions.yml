@@ -1,0 +1,7 @@
+'administer otp_service':
+  title: 'Administer OTP Service Node configurations'
+  description: 'Allows users to setup for which node bundles and OPT confirmation is needed.'
+
+'use otp_service form':
+  title: 'User OTP Service Bundle Form'
+  description: 'Allow users to use the OTP Service validation form.'

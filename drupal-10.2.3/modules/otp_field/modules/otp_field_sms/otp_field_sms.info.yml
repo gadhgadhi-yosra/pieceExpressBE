@@ -1,0 +1,16 @@
+name: OTP Field SMS Processor
+description: Provides SMS Processor plugin for otp_field.
+type: module
+core_version_requirement: ^9 || ^10
+php: 8.1
+package: OTP Field
+
+dependencies:
+  - otp_field:otp_field
+  - drupal:telephone
+  - smsframework:sms (>=2.2)
+
+# Information added by Drupal.org packaging script on 2023-10-08
+version: '1.0.0-beta3'
+project: 'otp_field'
+datestamp: 1696738508

@@ -1,0 +1,8 @@
+name : Authentification 
+description: Allow users to zuthrntification 
+package: CustomModules 
+
+
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+php_version: ^8 || ^9

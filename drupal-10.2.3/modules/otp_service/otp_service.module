@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * OTP Service module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_help().
+ *
+ */
+function otp_service_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+      case 'help.page.otp_service':
+        $output = '';
+        $output .= '<h2>' . t('About') . '</h2>';
+        $output .= '<p>' . t('OTP Service is a module that provides a block for OTP configuration and service for validation.')
+          . '</p>';
+        $output .= '<p>' . t('The block generates a QR Code using a secret stored on the user entity. The service provided by this module can then be used by developers to validate user input.')
+            . '</p>';
+        return $output;
+  
+    }
+  }
+
+
+  /**
+ * Implements hook_entity_base_field_info().
+ */
+function otp_service_entity_base_field_info(EntityTypeInterface $entity_type) {
+    $fields = [];
+  
+    // Add a 'OTP Secret' base field to user entity.
+    if ($entity_type->id() === 'user') {
+      $fields['otp_secret'] = BaseFieldDefinition::create('text')
+        ->setLabel(t('OTP Secret'))
+        ->setDescription(t('The Secret to be used in OTP generation.'))
+        ->setRevisionable(FALSE)
+        ->setTranslatable(FALSE);
+    }
+  
+    return $fields;
+  }
+
+  /**
+ * Implements hook_install().
+ */
+function otp_service_install() {
+    $entity_type = \Drupal::entityTypeManager()->getDefinition('user');
+    \Drupal::entityDefinitionUpdateManager()->updateEntityType($entity_type);
+}
+  
+/**
+* Implements hook_uninstall().
+*/
+function otp_service_uninstall() {
+    $entity_type = \Drupal::entityTypeManager()->getDefinition('user');
+    \Drupal::entityDefinitionUpdateManager()->updateEntityType($entity_type);
+}

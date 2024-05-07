@@ -1,0 +1,10 @@
+otp_field_user_auth.settings:
+  route_name: otp_field_user_auth.settings
+  title: User Auth
+  base_route: otp_field.settings
+
+otp_field.user_auth:
+  route_name: otp_field.user_auth
+  title: OTP Login
+  base_route: user.page
+  weight: -9

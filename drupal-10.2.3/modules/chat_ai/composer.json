@@ -1,0 +1,17 @@
+{
+    "name": "drupal/chat_ai",
+    "description": "A chatbot that can answer questions based on your website content.",
+    "keywords": ["openai", "GPT-3", "AI content", "gpt"],
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Dimitris Spachos",
+            "homepage": "http://drupal.org/u/dspachos",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "openai-php/client": "^0.4|^v0.5.2"
+    }
+}

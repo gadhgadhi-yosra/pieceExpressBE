@@ -1,0 +1,11 @@
+services:
+  plugin.manager.otp_field_processor:
+    class: Drupal\otp_field\OtpFieldProcessorPluginManager
+    parent: default_plugin_manager
+
+  # Provides OTP functionality. Generates secrets and stores them in the database.
+  otp_field.otp_provider:
+    class: Drupal\otp_field\OtpProvider
+    arguments:
+      - '@database'
+      - '@config.factory'

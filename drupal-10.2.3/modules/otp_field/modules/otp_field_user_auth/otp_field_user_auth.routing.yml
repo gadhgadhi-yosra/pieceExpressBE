@@ -1,0 +1,19 @@
+# OTP Login form
+otp_field.user_auth:
+  path: /user/otp
+  defaults:
+    _form: Drupal\otp_field_user_auth\Form\UserAuthForm
+    _title: OTP Authentication
+  requirements:
+    _user_is_logged_in: 'FALSE'
+  options:
+    no_cache: true
+
+# Configuration form
+otp_field_user_auth.settings:
+  path: /admin/config/people/otp_field/user_auth
+  defaults:
+    _form: Drupal\otp_field_user_auth\Form\SettingsForm
+    _title: Configure OTP Field User Auth
+  requirements:
+    _permission: configure otp_field_user_auth

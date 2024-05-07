@@ -1,0 +1,14 @@
+cars.lister_cars:
+  path: '/cars/lister-cars'
+  defaults:
+    _controller: '\Drupal\cars\Controller\carsController::listercars'
+    _title: 'Liste des cars'
+  requirements:
+    _permission: 'access content'
+cars.lister_cars_by_marque:
+  path: '/cars/lister-cars-by-marque'
+  defaults:
+    _controller: '\Drupal\cars\Controller\carsController::listCarsByMarque'
+    _title: 'Liste des cars par marque'
+  requirements:
+    _permission: 'access content'

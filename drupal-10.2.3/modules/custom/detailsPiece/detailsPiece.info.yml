@@ -1,0 +1,5 @@
+name: 'Details Piece'
+type: module
+core_version_requirement: ^10
+description: 'Provides an API endpoint for posting details about a piece.'
+package: Custom

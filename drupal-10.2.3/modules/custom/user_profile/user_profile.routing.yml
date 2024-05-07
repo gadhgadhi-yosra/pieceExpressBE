@@ -1,0 +1,36 @@
+user_profile.register:
+  path: '/user/custom-register'
+  defaults:
+    _controller: '\Drupal\user_profile\Controller\userController::register'
+    _title: 'Register User'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+
+user_profile.login:
+  path: '/user/custom-login'
+  defaults:
+    _controller: '\Drupal\user_profile\Controller\userController::login'
+  methods: [ 'POST' ]
+  requirements:
+    _permission: 'access content'
+
+user_profile.update:
+  path: '/user/update'
+  defaults:
+    _controller: '\Drupal\user_profile\Controller\userController::update'
+  methods: [ 'POST' ]
+  requirements:
+    _permission: 'access content'
+
+user_profile.reset_password:
+  path: '/user/reset-password'
+  defaults:
+    _controller: '\Drupal\user_profile\Controller\userController::resetPassword'
+    methods: [ 'POST' ]
+  requirements:
+    _permission: 'access content'
+
+
+
+    

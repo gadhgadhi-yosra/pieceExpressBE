@@ -1,0 +1,10 @@
+name: OTP Service
+description: "This module provides a form to setup a otp token and a service to validate access."
+core_version_requirement: ^9 || ^10
+type: module
+package: Security
+configure: otp_service.settings
+# Information added by Drupal.org packaging script on 2023-08-12
+version: '1.0.0'
+project: 'otp_service'
+datestamp: 1691830176

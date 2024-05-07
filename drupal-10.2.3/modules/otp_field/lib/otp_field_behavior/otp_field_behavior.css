@@ -1,0 +1,135 @@
+/**
+ * Validation statuses: initial (none)
+ */
+.otp-field-container[otp-validation-status=none] .otp-id-wrapper {
+  display: block;
+}
+.otp-field-container[otp-validation-status=none] .otp-secret-wrapper {
+  display: none;
+}
+.otp-field-container[otp-validation-status=none] .otp-field-action-btn-send-code {
+  display: inline-block;
+}
+.otp-field-container[otp-validation-status=none] .otp-field-action-btn-resend-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=none] .otp-field-action-btn-change-identity {
+  display: none;
+}
+.otp-field-container[otp-validation-status=none] .otp-field-action-btn-verify {
+  display: none;
+}
+.otp-field-container[otp-validation-status=none] .otp-field-action-btn-verify-again {
+  display: none;
+}
+
+/**
+ * Validation statuses: success
+ */
+.otp-field-container[otp-validation-status=success] .otp-id-wrapper {
+  display: block;
+}
+.otp-field-container[otp-validation-status=success] .otp-id-wrapper input {
+  background-color: lightgreen;
+}
+.otp-field-container[otp-validation-status=success] .otp-secret-wrapper {
+  display: none;
+}
+.otp-field-container[otp-validation-status=success] .otp-field-action-btn-send-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=success] .otp-field-action-btn-resend-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=success] .otp-field-action-btn-change-identity {
+  display: none;
+}
+.otp-field-container[otp-validation-status=success] .otp-field-action-btn-verify {
+  display: none;
+}
+.otp-field-container[otp-validation-status=success] .otp-field-action-btn-verify-again {
+  display: none;
+}
+
+/**
+ * Validation statuses: code_sent
+ */
+.otp-field-container[otp-validation-status=code_sent] .otp-id-wrapper {
+  display: none;
+}
+.otp-field-container[otp-validation-status=code_sent] .otp-secret-wrapper {
+  display: block;
+}
+.otp-field-container[otp-validation-status=code_sent] .otp-field-action-btn-send-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=code_sent] .otp-field-action-btn-resend-code {
+  display: inline-block;
+}
+.otp-field-container[otp-validation-status=code_sent] .otp-field-action-btn-change-identity {
+  display: inline-block;
+}
+.otp-field-container[otp-validation-status=code_sent] .otp-field-action-btn-verify {
+  display: inline-block;
+}
+.otp-field-container[otp-validation-status=code_sent] .otp-field-action-btn-verify-again {
+  display: none;
+}
+
+/**
+ * Validation statuses: invalid_secret
+ */
+.otp-field-container[otp-validation-status=invalid_secret] .otp-id-wrapper {
+  display: none;
+}
+.otp-field-container[otp-validation-status=invalid_secret] .otp-secret-wrapper {
+  display: block;
+}
+.otp-field-container[otp-validation-status=invalid_secret] .otp-field-action-btn-send-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=invalid_secret] .otp-field-action-btn-resend-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=invalid_secret] .otp-field-action-btn-change-identity {
+  display: none;
+}
+.otp-field-container[otp-validation-status=invalid_secret] .otp-field-action-btn-verify {
+  display: none;
+}
+.otp-field-container[otp-validation-status=invalid_secret] .otp-field-action-btn-verify-again {
+  display: inline-block;
+}
+
+/**
+ * Validation statuses: error
+ */
+.otp-field-container[otp-validation-status=error] .otp-id-wrapper {
+  display: block;
+}
+.otp-field-container[otp-validation-status=error] .otp-secret-wrapper {
+  display: none;
+}
+.otp-field-container[otp-validation-status=error] .otp-field-action-btn-send-code {
+  display: none;
+}
+.otp-field-container[otp-validation-status=error] .otp-field-action-btn-resend-code {
+  display: inline-block;
+}
+.otp-field-container[otp-validation-status=error] .otp-field-action-btn-change-identity {
+  display: inline-block;
+}
+.otp-field-container[otp-validation-status=error] .otp-field-action-btn-verify {
+  display: none;
+}
+.otp-field-container[otp-validation-status=error] .otp-field-action-btn-verify-again {
+  display: none;
+}
+
+/**
+ * Countdown: when a countdown is on progress.
+ */
+[data-otp-countdown] {
+  cursor: not-allowed;
+  background-color: #ddd;
+}

@@ -1,0 +1,5 @@
+otp_service.settings:
+  title: OTP Service Settings
+  description: 'Set the Node bundles for which an otp should be required.'
+  route_name: otp_service.settings
+  parent: user.admin_index

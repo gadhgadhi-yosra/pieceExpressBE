@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_commerce_checkout_pane_info_alter().
+ */
+function commerce_checkout_otp_login_commerce_checkout_pane_info_alter(array &$checkout_panes) {
+  if (isset($checkout_panes['login'])) {
+
+  }
+}

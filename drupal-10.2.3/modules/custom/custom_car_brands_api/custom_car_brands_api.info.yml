@@ -1,0 +1,7 @@
+name: Custom Car Brands API
+type: module
+description: 'Provides a REST API endpoint for car brands.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:rest

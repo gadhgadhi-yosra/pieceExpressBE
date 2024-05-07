@@ -1,0 +1,4 @@
+otp_field.settings:
+  route_name: otp_field.settings
+  title: Settings
+  base_route: otp_field.settings

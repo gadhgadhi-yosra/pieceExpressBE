@@ -1,0 +1,9 @@
+services:
+  otp_service.otp_validate_service:
+    class: Drupal\otp_service\Service\OTPValidateService
+    arguments: ['@current_user']
+  otp_service.otp_route_subscriber:
+    class: Drupal\otp_service\EventSubscriber\OTPRouteSubscriber
+    arguments: ['@config.factory', '@tempstore.private']
+    tags:
+      - {name: event_subscriber}

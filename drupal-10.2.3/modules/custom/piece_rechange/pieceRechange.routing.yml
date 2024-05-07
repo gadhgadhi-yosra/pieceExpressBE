@@ -1,0 +1,7 @@
+cars.lister_contenus:
+  path: '/pieceRechange/lister-pieceRechange'
+  defaults:
+    _controller: '\Drupal\pieceRechange\Controller\pieceRechangeController::listerpieceRechange'
+    _title: 'Liste des pieceRechange'
+  requirements:
+    _permission: 'access content'

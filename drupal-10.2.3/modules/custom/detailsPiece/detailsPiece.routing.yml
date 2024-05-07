@@ -1,0 +1,8 @@
+detailsPiece.api:
+  path: '/api/details-piece'
+  defaults:
+    _controller: '\Drupal\detailsPiece\Controller\DetailsPieceController::listdetailPiece'
+    _title: 'Details Piece API'
+  methods: ['POST']
+  requirements:
+    _permission: 'access content'
